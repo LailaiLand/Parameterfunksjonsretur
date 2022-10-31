@@ -23,8 +23,11 @@
         
         function boxChange(tekst, farge, høyde, bredde, ramme) {
             document.getElementById('changeBox').innerHTML = `
-            <div style="background-color:${farge}; height:${høyde}; width:${bredde}; border: 2px ${ramme} black;"> ${tekst} </div>
+            <div ${makeStyle(farge, høyde, bredde, ramme)}> ${tekst} </div>
             `;
+                }
+                function makeStyle(farge, høyde, bredde, ramme){
+                    return `style="background-color:${farge}; height:${høyde}; width:${bredde}; border: 2px ${ramme} black;"`
                 }
     </script>
 </body>
